@@ -1,7 +1,3 @@
-Perfect! Since you want a **general README that applies to any batch file**, including your tools like `YOLO & Image Extractor Tool.bat` and `Debug Log Tool.bat`, here’s a clean, universal template you can use:
-
----
-
 # Batch File Utilities
 
 This repository contains **Windows batch scripts** to automate various tasks. These scripts are designed to be **simple, portable, and easy to use**, without requiring programming knowledge.
