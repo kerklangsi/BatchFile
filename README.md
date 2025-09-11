@@ -37,7 +37,7 @@ A tool that extracts still frames from videos at a user-defined FPS (frames per 
 
 ---
 
-### 🔹 [Install/Uninstall FFmpeg Tool](InstallunistallFfmpeg_Tool/README.md)
+### 🔹 [Install/Uninstall FFmpeg Tool](Ffmpeg_Tool/README.md)
 
 A simple installer/uninstaller for **FFmpeg**, powered by **Winget**.
 
@@ -48,7 +48,7 @@ A simple installer/uninstaller for **FFmpeg**, powered by **Winget**.
 
 ---
 
-### 🔹 [YOLO & Image Extractor Tool](YOLO&ImageExtractor_Tool/README.md)
+### 🔹 [YOLO & Image Extractor Tool](YOLOExtractor_Tool/README.md)
 
 A **complete workflow tool** that integrates multiple utilities into one:
 
