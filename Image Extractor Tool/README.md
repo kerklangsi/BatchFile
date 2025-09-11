@@ -33,16 +33,16 @@ It automatically names the extracted images with the video’s base filename and
 2. Enter the required inputs when prompted:
 
    ```
-   Enter full path to video file: C:\Videos\car.mp4
-   Enter full path to output folder: C:\Dataset\CarImages
+   Enter full path to video file: C:\Videos\car.mp4  or "C:\Videos\car.mp4"
+   Enter full path to output folder: C:\Dataset\CarImages  or "C:\Dataset\CarImages"
    Enter FPS to extract: 2
    ```
-
+   
 3. Review the settings:
 
    ```
-   Video file:    "C:\Videos\car.mp4" or ""C:\Videos\car.mp4""
-   Output folder: ""C:\Dataset\CarImages"" or "C:\Dataset\CarImages"
+   Video file:    "C:\Videos\car.mp4"
+   Output folder: "C:\Dataset\CarImages"
    FPS:           2
    Base name:     car
    Example file:  "C:\Dataset\CarImages\car_0001.png"
