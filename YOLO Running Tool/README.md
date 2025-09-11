@@ -62,11 +62,11 @@ It sets up an Anaconda environment, installs dependencies, downloads datasets fr
 
 
 
-&nbsp;  ```bat
+```bat
 
-&nbsp;  YOLO_Running_Tool.bat
+YOLO_Running_Tool.bat
 
-&nbsp;  ```
+```
 
 
 
@@ -74,147 +74,147 @@ It sets up an Anaconda environment, installs dependencies, downloads datasets fr
 
 
 
-&nbsp;  ### Select YOLO version
+### Select YOLO version
 
 
 
-&nbsp;  ```
+```
 
-&nbsp;  ================================================================
+================================================================
 
-&nbsp;                          YOLO TRAINING
+                        YOLO TRAINING
 
-&nbsp;  ================================================================
+================================================================
 
-&nbsp;  Example: enter 11 for YOLO11, 8 for YOLO8
+Example: enter 11 for YOLO11, 8 for YOLO8
 
-&nbsp;  Enter YOLO version number:
+Enter YOLO version number:
 
-&nbsp;  ```
+```
 
 
 
-&nbsp;  → Enter `8` for YOLOv8 or `11` for YOLOv11.
+→ Enter `8` for YOLOv8 or `11` for YOLOv11.
 
 
 
-&nbsp;  ### Activate Conda environment
+### Activate Conda environment
 
 
 
-&nbsp;  ```
+```
 
-&nbsp;  ================================================================
+================================================================
 
-&nbsp;                          Activate Conda
+                        Activate Conda
 
-&nbsp;  ================================================================
+================================================================
 
-&nbsp;  Creating conda environment yolov8 ...
+Creating conda environment yolov8 ...
 
-&nbsp;  ```
+```
 
 
 
-&nbsp;  ### Install dependencies
+### Install dependencies
 
 
 
-&nbsp;  ```
+```
 
-&nbsp;  ================================================================
+================================================================
 
-&nbsp;                     Install dependencies
+                   Install dependencies
 
-&nbsp;  ================================================================
+================================================================
 
-&nbsp;  Checking dependencies (skip if already installed)...
+Checking dependencies (skip if already installed)...
 
-&nbsp;  Installing ultralytics, supervision, roboflow...
+Installing ultralytics, supervision, roboflow...
 
-&nbsp;  Installing PyTorch...
+Installing PyTorch...
 
-&nbsp;  ```
+```
 
 
 
-&nbsp;  ### Verify CUDA
+### Verify CUDA
 
 
 
-&nbsp;  ```
+```
 
-&nbsp;  ================================================================
+================================================================
 
-&nbsp;                          Verify CUDA
+                        Verify CUDA
 
-&nbsp;  ================================================================
+================================================================
 
-&nbsp;  True NVIDIA GeForce RTX 4090
+True NVIDIA GeForce RTX 4090
 
-&nbsp;  ```
+```
 
 
 
-&nbsp;  ### Roboflow dataset (optional)
+### Roboflow dataset (optional)
 
 
 
-&nbsp;  ```
+```
 
-&nbsp;  ================================================================
+================================================================
 
-&nbsp;                       Roboflow Dataset
+                     Roboflow Dataset
 
-&nbsp;  ================================================================
+================================================================
 
-&nbsp;  If Roboflow dataset already downloaded, just press Enter.
+If Roboflow dataset already downloaded, just press Enter.
 
-&nbsp;  Paste your Roboflow dataset download link:
+Paste your Roboflow dataset download link:
 
-&nbsp;  ```
+```
 
 
 
-&nbsp;  ### Set training epochs
+### Set training epochs
 
 
 
-&nbsp;  ```
+```
 
-&nbsp;  ================================================================
+================================================================
 
-&nbsp;                          Set Epochs
+                        Set Epochs
 
-&nbsp;  ================================================================
+================================================================
 
-&nbsp;  Enter number of epochs to train (e.g. 50):
+Enter number of epochs to train (e.g. 50):
 
-&nbsp;  ```
+```
 
 
 
-&nbsp;  ### Confirm and run training
+### Confirm and run training
 
 
 
-&nbsp;  ```
+```
 
-&nbsp;  ================================================================
+================================================================
 
-&nbsp;                   Confirm and Run Training
+                 Confirm and Run Training
 
-&nbsp;  ================================================================
+================================================================
 
-&nbsp;  [1] Start YOLO training
+[1] Start YOLO training
 
-&nbsp;  [2] Back to YOLO runner
+[2] Back to YOLO runner
 
-&nbsp;  [3] Exit
+[3] Exit
 
-&nbsp;  Choose an option (1-3):
+Choose an option (1-3):
 
-&nbsp;  ```
+```
 
 
 
@@ -222,11 +222,11 @@ It sets up an Anaconda environment, installs dependencies, downloads datasets fr
 
 
 
-&nbsp;  * Models and logs are saved in: `runs/detect/train/`
+* Models and logs are saved in: `runs/detect/train/`
 
-&nbsp;  * Best weights: `runs/detect/train/weights/best.pt`
+* Best weights: `runs/detect/train/weights/best.pt`
 
-&nbsp;  * Predictions: `runs/detect/predict/`
+* Predictions: `runs/detect/predict/`
 
 
 
