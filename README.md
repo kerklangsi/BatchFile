@@ -17,35 +17,62 @@ A collection of **Windows batch tools** for automation, video/image processing, 
 
 ## ✨ Tools
 
-### 🔹 Debug Log Tool
+### 🔹 [Debug Log Tool](Debug%20Log%20Tool/README.md)
 
-* Run any batch file and capture console output to a log file.
-* Useful for debugging or saving program output for later review.
+A utility that lets you run any batch file while automatically saving its console output into a log file.
 
-### 🔹 Image Extractor Tool
-
-* Extract frames from videos at a custom FPS using **FFmpeg**.
-* Prompts user for input video path, output folder, and FPS.
-
-### 🔹 Install/Uninstall FFmpeg Tool
-
-* Install FFmpeg via **Winget** with one click.
-* Uninstall FFmpeg if no longer needed.
-* Check installed FFmpeg version.
-
-### 🔹 YOLO & Image Extractor Tool
-
-* Combined tool for dataset preparation and object detection.
-* Extracts images from videos and runs YOLO detection in one workflow.
-
-### 🔹 YOLO Running Tool
-
-* Run YOLOv8 models on images or videos.
-* Prompts for model file and source path.
-* Saves results in the `runs\detect` folder.
+* Useful for debugging scripts.
+* Helps track what happened during execution.
+* Can be used to keep permanent records of program output.
 
 ---
 
+### 🔹 [Image Extractor Tool](Image%20Extractor%20Tool/README.md)
+
+A tool that extracts still frames from videos at a user-defined FPS (frames per second) using **FFmpeg**.
+
+* Converts video into individual images.
+* Perfect for dataset preparation (e.g., machine learning).
+* Lets you choose input video, output folder, and FPS interactively.
+
+---
+
+### 🔹 [Install/Uninstall FFmpeg Tool](Install%20unistall%20Ffmpeg%20Tool/README.md)
+
+A simple installer/uninstaller for **FFmpeg**, powered by **Winget**.
+
+* Install FFmpeg with one click (no manual setup needed).
+* Uninstall FFmpeg if no longer required.
+* Check if FFmpeg is installed and display its version.
+* Helps users who aren’t familiar with command-line setup.
+
+---
+
+### 🔹 [YOLO & Image Extractor Tool](YOLO%20&%20Image%20Extractor%20Tool/README.md)
+
+A combined workflow tool that handles both **frame extraction** and **YOLO object detection**.
+
+* Extracts images from a video using FFmpeg.
+* Immediately runs YOLOv8 detection on the extracted images.
+* Saves time by combining dataset preparation and detection into one program.
+
+---
+
+### 🔹 [YOLO & Image Extractor Tool](YOLO%20&%20Image%20Extractor%20Tool/README.md)
+
+A **complete workflow tool** that integrates multiple utilities into one:
+
+* 🖼 **Image Extractor Tool** – Extract frames from videos using FFmpeg.
+* 🤖 **YOLO Running Tool** – Run YOLO model object detection on the extracted frames.
+* ⚙ **Install/Uninstall FFmpeg Tool** – Quickly install/uninstall FFmpeg if it’s not already set up.
+
+This tool is designed to save time by combining dataset preparation, environment setup, and detection in one script. Ideal for users who want a **one-stop solution** instead of running separate tools individually.
+
+---
+
+👉 Each tool has its **own README tutorial** in its folder, with step-by-step usage guides.
+
+---
 ## ⚙ Requirements
 
 * Microsoft Windows 10/11
@@ -57,9 +84,12 @@ A collection of **Windows batch tools** for automation, video/image processing, 
 
 ## 📖 Usage
 
-1. Choose the tool you want to run (`.bat` or `.exe`).
-2. Follow the on-screen prompts (file paths, folders, FPS, model name, etc.).
-3. Results will be saved in your chosen directory or in `runs\detect`.
+1. Download or clone this repository.
+2. Navigate to the folder of the tool you want to use.
+3. Run the `.bat` or `.exe` file inside.
+4. See the tool’s individual `README.md` for full instructions.
+
+Each tool is self-contained and will guide you with prompts specific to its task.
 
 ---
 
