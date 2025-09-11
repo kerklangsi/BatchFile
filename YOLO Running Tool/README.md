@@ -1,12 +1,12 @@
-\# YOLO Running Tool
+# YOLO Running Tool
 
 
 
-\## 📌 Description
+## 📌 Description
 
 
 
-The \*\*YOLO Running Tool\*\* is a Windows batch script that automates the process of training YOLO models.
+The **YOLO Running Tool** is a Windows batch script that automates the process of training YOLO models.
 
 It sets up an Anaconda environment, installs dependencies, downloads datasets from Roboflow, and generates a ready-to-run training script.
 
@@ -16,37 +16,17 @@ It sets up an Anaconda environment, installs dependencies, downloads datasets fr
 
 
 
-\## ✅ Requirements
+## ✅ Requirements
 
 
 
-\* Microsoft Windows 10/11
+* Microsoft Windows 10/11
 
-\* \[Anaconda](https://www.anaconda.com/)
+* [Anaconda](https://www.anaconda.com/)
 
-\* Internet connection (for dependency installation and optional dataset download)
+* Internet connection (for dependency installation and optional dataset download)
 
-\* GPU with CUDA support (recommended for faster training)
-
-
-
----
-
-
-
-\## 🎯 What It’s Used For
-
-
-
-\* Setting up YOLOv8 or YOLOv11 training with minimal effort
-
-\* Automatically managing Python/Conda environments
-
-\* Installing required dependencies (Ultralytics, PyTorch, Roboflow, Supervision)
-
-\* Downloading datasets directly from Roboflow
-
-\* Running training, validation, and prediction in one pipeline
+* GPU with CUDA support (recommended for faster training)
 
 
 
@@ -54,23 +34,43 @@ It sets up an Anaconda environment, installs dependencies, downloads datasets fr
 
 
 
-\## 🚀 How to Use
+## 🎯 What It’s Used For
 
 
 
-1\. \*\*Run the script\*\*
+* Setting up YOLOv8 or YOLOv11 training with minimal effort
+
+* Automatically managing Python/Conda environments
+
+* Installing required dependencies (Ultralytics, PyTorch, Roboflow, Supervision)
+
+* Downloading datasets directly from Roboflow
+
+* Running training, validation, and prediction in one pipeline
+
+
+
+---
+
+
+
+## 🚀 How to Use
+
+
+
+1. **Run the script**
 
 
 
 &nbsp;  ```bat
 
-&nbsp;  YOLO\_Running\_Tool.bat
+&nbsp;  YOLO_Running_Tool.bat
 
 &nbsp;  ```
 
 
 
-2\. \*\*You will see prompts like this:\*\*
+2. **You will see prompts like this:**
 
 
 
@@ -206,11 +206,11 @@ It sets up an Anaconda environment, installs dependencies, downloads datasets fr
 
 &nbsp;  ================================================================
 
-&nbsp;  \[1] Start YOLO training
+&nbsp;  [1] Start YOLO training
 
-&nbsp;  \[2] Back to YOLO runner
+&nbsp;  [2] Back to YOLO runner
 
-&nbsp;  \[3] Exit
+&nbsp;  [3] Exit
 
 &nbsp;  Choose an option (1-3):
 
@@ -218,15 +218,15 @@ It sets up an Anaconda environment, installs dependencies, downloads datasets fr
 
 
 
-3\. \*\*After training completes\*\*
+3. **After training completes**
 
 
 
-&nbsp;  \* Models and logs are saved in: `runs/detect/train/`
+&nbsp;  * Models and logs are saved in: `runs/detect/train/`
 
-&nbsp;  \* Best weights: `runs/detect/train/weights/best.pt`
+&nbsp;  * Best weights: `runs/detect/train/weights/best.pt`
 
-&nbsp;  \* Predictions: `runs/detect/predict/`
+&nbsp;  * Predictions: `runs/detect/predict/`
 
 
 
