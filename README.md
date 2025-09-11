@@ -17,7 +17,7 @@ A collection of **Windows batch tools** for automation, video/image processing, 
 
 ## ✨ Tools
 
-### 🔹 [Debug Log Tool](Debug%20Log%20Tool/README.md)
+### 🔹 [Debug Log Tool](DebugLog_Tool/README.md)
 
 A utility that lets you run any batch file while automatically saving its console output into a log file.
 
@@ -27,7 +27,7 @@ A utility that lets you run any batch file while automatically saving its consol
 
 ---
 
-### 🔹 [Image Extractor Tool](Image%20Extractor%20Tool/README.md)
+### 🔹 [Image Extractor Tool](ImageExtractor_Tool/README.md)
 
 A tool that extracts still frames from videos at a user-defined FPS (frames per second) using **FFmpeg**.
 
@@ -37,7 +37,7 @@ A tool that extracts still frames from videos at a user-defined FPS (frames per 
 
 ---
 
-### 🔹 [Install/Uninstall FFmpeg Tool](Install%20unistall%20Ffmpeg%20Tool/README.md)
+### 🔹 [Install/Uninstall FFmpeg Tool](InstallunistallFfmpeg_Tool/README.md)
 
 A simple installer/uninstaller for **FFmpeg**, powered by **Winget**.
 
@@ -48,7 +48,7 @@ A simple installer/uninstaller for **FFmpeg**, powered by **Winget**.
 
 ---
 
-### 🔹 [YOLO & Image Extractor Tool](YOLO%20&%20Image%20Extractor%20Tool/README.md)
+### 🔹 [YOLO & Image Extractor Tool](YOLO&ImageExtractor_Tool/README.md)
 
 A **complete workflow tool** that integrates multiple utilities into one:
 
@@ -60,7 +60,7 @@ This tool is designed to save time by combining dataset preparation, environment
 
 ---
 
-### 🔹 [YOLO Running Tool](YOLO%20Running%20Tool/README.md)
+### 🔹 [YOLO Running Tool](YOLORunning_Tool/README.md)
 
 A dedicated runner for **YOLO Model object detection**.
 
