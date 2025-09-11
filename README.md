@@ -50,23 +50,23 @@ A simple installer/uninstaller for **FFmpeg**, powered by **Winget**.
 
 ### 🔹 [YOLO & Image Extractor Tool](YOLO%20&%20Image%20Extractor%20Tool/README.md)
 
-A combined workflow tool that handles both **frame extraction** and **YOLO object detection**.
-
-* Extracts images from a video using FFmpeg.
-* Immediately runs YOLOv8 detection on the extracted images.
-* Saves time by combining dataset preparation and detection into one program.
-
----
-
-### 🔹 [YOLO & Image Extractor Tool](YOLO%20&%20Image%20Extractor%20Tool/README.md)
-
 A **complete workflow tool** that integrates multiple utilities into one:
 
 * 🖼 **Image Extractor Tool** – Extract frames from videos using FFmpeg.
-* 🤖 **YOLO Running Tool** – Run YOLO model object detection on the extracted frames.
+* 🤖 **YOLO Running Tool** – Run YOLO Model object detection on the extracted frames.
 * ⚙ **Install/Uninstall FFmpeg Tool** – Quickly install/uninstall FFmpeg if it’s not already set up.
 
 This tool is designed to save time by combining dataset preparation, environment setup, and detection in one script. Ideal for users who want a **one-stop solution** instead of running separate tools individually.
+
+---
+
+### 🔹 [YOLO Running Tool](YOLO%20Running%20Tool/README.md)
+
+A dedicated runner for **YOLO Model object detection**.
+
+* Lets you choose the YOLO model file (`.pt`) and input source (image, folder, or video).
+* Runs detection and saves results in the `runs\detect` folder.
+* Great for testing trained models or applying pretrained YOLO models to new data.
 
 ---
 
