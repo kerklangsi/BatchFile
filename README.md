@@ -77,6 +77,7 @@ A dedicated runner for **YOLO Model object detection**.
 
 * Microsoft Windows 10/11
 * [FFmpeg](https://ffmpeg.org/) (for video/image extraction)
+* [Anaconda](https://www.anaconda.com/) (recommended for managing Python environments)
 * [Ultralytics YOLO](https://github.com/ultralytics/ultralytics) (for object detection)
 * [Winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/) (for installing FFmpeg)
 
