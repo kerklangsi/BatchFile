@@ -26,8 +26,8 @@ It automatically names the extracted images with the video’s base filename and
 
 1. Run the script:
 
-   ```bat
-   Image_Extractor_Tool.bat
+   ```
+   Image.Extractor.Tool.exe
    ```
 
 2. Enter the required inputs when prompted:
@@ -41,8 +41,8 @@ It automatically names the extracted images with the video’s base filename and
 3. Review the settings:
 
    ```
-   Video file:    "C:\Videos\car.mp4"
-   Output folder: "C:\Dataset\CarImages"
+   Video file:    "C:\Videos\car.mp4" or ""C:\Videos\car.mp4""
+   Output folder: ""C:\Dataset\CarImages"" or "C:\Dataset\CarImages"
    FPS:           2
    Base name:     car
    Example file:  "C:\Dataset\CarImages\car_0001.png"
