@@ -69,4 +69,4 @@ Feel free to add your own batch scripts or improve existing ones. Pull requests 
 
 ## License
 
-MIT License. See `LICENSE` file for details.
+MIT License. See `[LICENSE](https://raw.githubusercontent.com/kerklangsi/BatchFile/refs/heads/main/LICENCE)` file for details.
