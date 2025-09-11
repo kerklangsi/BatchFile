@@ -58,7 +58,7 @@ Choose an option (1-4):
 * Prompts for:
 
   * **Video file path** → e.g. `C:\Videos\car.mp4`
-  * **Output folder** → e.g. `C:\Dataset\CarImages`
+  * **Output folder** → e.g. `"C:\Dataset\CarImages"`
   * **FPS (frames per second)** → e.g. `2`
 
 * Example review screen:
@@ -143,7 +143,7 @@ Each image is a frame extracted at 2 FPS from the video.
 
   ```
   Uninstalling FFmpeg...
-  Please restart the bat.
+  Please restart.
   ```
 
 * **Check version** → shows installed FFmpeg details.
@@ -166,4 +166,3 @@ Each image is a frame extracted at 2 FPS from the video.
 
 ✅ This tool helps you go **from raw video → extracted images → trained YOLO model → predictions**, all inside one script.
 
----

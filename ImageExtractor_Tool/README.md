@@ -27,14 +27,14 @@ It automatically names the extracted images with the video’s base filename and
 1. Run the script:
 
    ```
-   Image.Extractor.Tool.exe
+   ImageExtractor_Tool.exe
    ```
 
-2. Enter the required inputs when prompted:
+2. Enter the required inputs when prompted: (can be use with quote or not)
 
    ```
-   Enter full path to video file: C:\Videos\car.mp4  or "C:\Videos\car.mp4"
-   Enter full path to output folder: C:\Dataset\CarImages  or "C:\Dataset\CarImages"
+   Enter full path to video file: C:\Videos\car.mp4
+   Enter full path to output folder: "C:\Dataset\CarImages"
    Enter FPS to extract: 2
    ```
    
@@ -68,5 +68,3 @@ It automatically names the extracted images with the video’s base filename and
    [1] Change inputs
    [2] Exit
    ```
-
----

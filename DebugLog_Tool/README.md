@@ -11,7 +11,7 @@ It uses `tee.exe` to capture the output while still displaying it in the CMD win
 
 * Microsoft Windows 10/11
 * Target `.bat` file you want to debug
-* [GnuWin32 CoreUtils](https://sourceforge.net/projects/gnuwin32/) → provides `tee.exe` (must be installed at `C:\Program Files (x86)\GnuWin32\bin\tee.exe` or update the path in the script)
+* [GnuWin32 CoreUtils](https://sourceforge.net/projects/gnuwin32/) → provides `tee.exe` (must be installed at `C:\Program Files (x86)\GnuWin32\bin\tee.exe`)
 
 ---
 
@@ -19,7 +19,7 @@ It uses `tee.exe` to capture the output while still displaying it in the CMD win
 
 * Debugging batch scripts by saving their console output.
 * Keeping permanent logs of script runs.
-* Troubleshooting errors and analyzing script behavior step by step.
+* Troubleshooting errors and analysing script behaviour step by step.
 * Running multiple debug sessions without manually copying console text.
 
 ---
@@ -28,8 +28,8 @@ It uses `tee.exe` to capture the output while still displaying it in the CMD win
 
 1. Run the script:
 
-   ```bat
-   Debug.Log.Tool.exe
+   ```
+   DebugLog_Tool.exe
    ```
 
 2. Enter the full path to the target batch file you want to debug. Example:
@@ -57,5 +57,3 @@ It uses `tee.exe` to capture the output while still displaying it in the CMD win
    [1] Run another debug session
    [2] Exit
    ```
-
----
