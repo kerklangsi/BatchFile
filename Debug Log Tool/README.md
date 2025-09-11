@@ -29,7 +29,7 @@ It uses `tee.exe` to capture the output while still displaying it in the CMD win
 1. Run the script:
 
    ```bat
-   Debug_Log_Tool.bat
+   Debug_Log_Tool.exe
    ```
 
 2. Enter the full path to the target batch file you want to debug. Example:
