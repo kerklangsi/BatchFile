@@ -1,72 +1,74 @@
 # Batch File Utilities
 
-This repository contains **Windows batch scripts** to automate various tasks. These scripts are designed to be **simple, portable, and easy to use**, without requiring programming knowledge.
+GitHub release (latest by date) – [Releases](https://github.com/kerklangsi/BatchFile/releases)
+GitHub repo – [BatchFile](https://github.com/kerklangsi/BatchFile)
+
+A collection of **Windows batch tools** for automation, video/image processing, and object detection. Each tool is portable, easy to use, and requires no coding knowledge.
 
 ---
 
-## Features
+## 📥 Download
 
-* Run any batch file with a double-click or from the command prompt.
-* Capture console output to logs for debugging or record-keeping.
-* Minimal dependencies — works on any Windows machine.
-* Flexible usage — can be applied to video/image processing, data management, or other batch automation tasks.
-
----
-
-## Requirements
-
-* Windows 10/11 (or later)
-* Optional tools depending on your scripts:
-
-  * FFmpeg (for video/image processing)
-  * YOLO model files (for object detection)
-* No additional installation required for basic batch execution.
+* Download the latest release from the [Releases section](https://github.com/kerklangsi/BatchFile/releases).
+* Extract and run any `.bat` file directly – no installation needed.
+* Converted `.exe` files are also available (built with BatToExe Portable).
 
 ---
 
-## Usage
+## ✨ Tools
 
-1. **Run a batch file**:
+### 🔹 Debug Log Tool
 
-Double-click the `.bat` file or run it from the command prompt:
+* Run any batch file and capture console output to a log file.
+* Useful for debugging or saving program output for later review.
 
-```bat
-"C:\Path\To\Your\BatchFile.bat"
-```
+### 🔹 Image Extractor Tool
 
-2. **Follow on-screen prompts** (if any).
+* Extract frames from videos at a custom FPS using **FFmpeg**.
+* Prompts user for input video path, output folder, and FPS.
 
-3. **Optional: Save console output to a log file**:
+### 🔹 Install/Uninstall FFmpeg Tool
 
-```bat
-"C:\Path\To\Your\BatchFile.bat" > log.txt
-```
+* Install FFmpeg via **Winget** with one click.
+* Uninstall FFmpeg if no longer needed.
+* Check installed FFmpeg version.
 
-This captures all console output into `log.txt` for later review.
+### 🔹 YOLO & Image Extractor Tool
 
----
+* Combined tool for dataset preparation and object detection.
+* Extracts images from videos and runs YOLO detection in one workflow.
 
-## Examples
+### 🔹 YOLO Running Tool
 
-### YOLO & Image Extractor Tool
-
-* Extract images from videos.
-* Run YOLO object detection on images or videos.
-* Prompts user for input and output directories.
-
-### Debug Log Tool
-
-* Run any batch file and capture its console output.
-* Useful for debugging or automated logging.
+* Run YOLOv8 models on images or videos.
+* Prompts for model file and source path.
+* Saves results in the `runs\detect` folder.
 
 ---
 
-## Contributing
+## ⚙ Requirements
 
-Feel free to add your own batch scripts or improve existing ones. Pull requests and issues are welcome.
+* Microsoft Windows 10/11
+* [FFmpeg](https://ffmpeg.org/) (for video/image extraction)
+* [Ultralytics YOLO](https://github.com/ultralytics/ultralytics) (for object detection)
+* [Winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/) (for installing FFmpeg)
 
 ---
 
-## License
+## 📖 Usage
 
-MIT License. See `[LICENSE](https://raw.githubusercontent.com/kerklangsi/BatchFile/refs/heads/main/LICENCE)` file for details.
+1. Choose the tool you want to run (`.bat` or `.exe`).
+2. Follow the on-screen prompts (file paths, folders, FPS, model name, etc.).
+3. Results will be saved in your chosen directory or in `runs\detect`.
+
+---
+
+## 🙌 Credits
+
+See [CREDITS.md](CREDITS.md) for full acknowledgments.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** – see the [LICENSE](https://raw.githubusercontent.com/kerklangsi/BatchFile/refs/heads/main/LICENCE) file for details.
