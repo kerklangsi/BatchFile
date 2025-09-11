@@ -1,6 +1,6 @@
 # Batch File Utilities
 
-GitHub release (latest by date) – [Releases](https://github.com/kerklangsi/BatchFile/releases)
+GitHub release (latest by date) – [Releases](https://github.com/kerklangsi/BatchFile//releases/tag/stable)
 GitHub repo – [BatchFile](https://github.com/kerklangsi/BatchFile)
 
 A collection of **Windows batch tools** for automation, video/image processing, and object detection. Each tool is portable, easy to use, and requires no coding knowledge.
@@ -9,7 +9,7 @@ A collection of **Windows batch tools** for automation, video/image processing, 
 
 ## 📥 Download
 
-* Download the latest release from the [Releases section](https://github.com/kerklangsi/BatchFile/releases).
+* Download the latest release from the [Releases section](https://github.com/kerklangsi/BatchFile//releases/tag/stable).
 * Extract and run any `.bat` file directly – no installation needed.
 * Converted `.exe` files are also available (built with BatToExe Portable).
 
