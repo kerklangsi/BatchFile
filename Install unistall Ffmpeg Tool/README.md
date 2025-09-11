@@ -60,15 +60,3 @@ This is useful for users who work with video/audio processing tools (like YOLO o
    * **Option 2 – Uninstall**: Removes FFmpeg if it’s installed.
    * **Option 3 – Check Version**: Displays the installed FFmpeg version.
    * **Option 4 – Exit**: Closes the program.
-
----
-
-## 📂 Project Structure
-
-```
-main/
-│── Install-Uninstall-FFmpeg.bat
-│── README.md
-```
-
-
