@@ -37,7 +37,7 @@ This is useful for users who work with video/audio processing tools (like YOLO o
 1. Run the batch file:
 
    ```bash
-   Install-Uninstall-FFmpeg.bat
+   Install-Uninstall-FFmpeg.exe
    ```
 
 2. Choose an option from the menu:
@@ -70,4 +70,5 @@ main/
 │── Install-Uninstall-FFmpeg.bat
 │── README.md
 ```
+
 
