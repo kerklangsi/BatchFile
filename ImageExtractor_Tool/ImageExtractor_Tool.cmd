@@ -4,6 +4,22 @@ title Image Extractor Tool
 
 :extract_start
 cls
+echo ================================================================
+echo                     Check for FFmpeg
+echo ================================================================
+where ffmpeg >nul 2>&1
+if %errorlevel%==0 (
+    echo FFmpeg is already installed. Continuing...
+) else (
+    echo FFmpeg is not installed. Installing...
+    winget install ffmpeg
+    echo FFmpeg installed successfully.
+    echo Please restart this script.
+    timeout /t 2 /nobreak >nul
+    goto extract_options
+)
+
+cls
 set "choice="
 set "video="
 set "outdir="
