@@ -1,42 +1,106 @@
-# BatchFile Tools Collection
+# Batch File Utilities
 
-This folder contains a collection of batch script tools designed for various multimedia and machine learning tasks.
+GitHub release (latest by date) – [Releases](https://github.com/kerklangsi/BatchFile/releases)  
+GitHub repo – [BatchFile](https://github.com/kerklangsi/BatchFile)
 
-## Included Tools
-
-- [**Debug Log Tool**](DebugLog_Tool/README.md): Runs a target batch file and captures its output to a timestamped log file.
-- [**Ffmpeg Tool**](Ffmpeg_Tool/README.md): Installs, uninstalls, and checks the version of FFmpeg using winget.
-- [**Image Extractor Tool**](ImageExtractor_Tool/README.md): Extracts images from video files at a specified frame rate using FFmpeg.
-- [**YOLO Extractor Tool**](YOLOExtractor_Tool/README.md): Provides image extraction and YOLO training automation with Anaconda and Python.
-- [**YOLO Running Tool**](YOLORunning_Tool/README.md): Runs YOLO object detection models with menu-driven commands.
-
-## Usage
-
-Run the batch tools launcher script directly from the internet using PowerShell:
-
-```powershell
-iwr -useb https://tinyurl.com/yr92ra3c | iex
-```
-
-## Credits
-
-See the [CREDITS.md](CREDITS.md) file for contributors and acknowledgments.
-
-## Requirements
-
-- Windows 10 or later with winget installed.
-- Anaconda installed for YOLO-related tools.
-- Python environment with necessary packages for YOLO training and running.
-
-## Notes
-
-- After installing or uninstalling FFmpeg, restart your command prompt or PowerShell window.
-- Ensure all required dependencies are installed and accessible in your PATH.
-
-## License
-
-Please refer to the LICENSE(LICENSE) file in the root BatchFile folder for license details.
+A collection of **Windows batch tools** for automation, video/image processing, and object detection. Each tool is portable, easy to use, and requires no coding knowledge.
 
 ---
 
-Created by kerklangsi
+## 📥 Download
+
+* Download the latest release from the [Releases section](https://github.com/kerklangsi/BatchFile/releases).
+* Extract and run any `.bat` file directly – no installation needed.
+* Converted `.exe` files are also available (built with BatToExe Portable).
+
+---
+
+## ✨ Tools
+
+### 🔹 [Debug Log Tool](DebugLog_Tool/README.md)
+
+A utility that lets you run any batch file while automatically saving its console output into a log file.
+
+* Useful for debugging scripts.
+* Helps track what happened during execution.
+* Can be used to keep permanent records of program output.
+
+---
+
+### 🔹 [Image Extractor Tool](ImageExtractor_Tool/README.md)
+
+A tool that extracts still frames from videos at a user-defined FPS (frames per second) using **FFmpeg**.
+
+* Converts video into individual images.
+* Perfect for dataset preparation (e.g., machine learning).
+* Lets you choose input video, output folder, and FPS interactively.
+
+---
+
+### 🔹 [Install/Uninstall FFmpeg Tool](Ffmpeg_Tool/README.md)
+
+A simple installer/uninstaller for **FFmpeg**, powered by **Winget**.
+
+* Install FFmpeg with one click (no manual setup needed).
+* Uninstall FFmpeg if no longer required.
+* Check if FFmpeg is installed and display its version.
+* Helps users who aren’t familiar with command-line setup.
+
+---
+
+### 🔹 [YOLO & Image Extractor Tool](YOLOExtractor_Tool/README.md)
+
+A **complete workflow tool** that integrates multiple utilities into one:
+
+* 🖼 **Image Extractor Tool** – Extract frames from videos using FFmpeg.
+* 🤖 **YOLO Running Tool** – Run YOLO Model object detection on the extracted frames.
+* ⚙ **Install/Uninstall FFmpeg Tool** – Quickly install/uninstall FFmpeg if it’s not already set up.
+
+This tool is designed to save time by combining dataset preparation, environment setup, and detection in one script. Ideal for users who want a **one-stop solution** instead of running separate tools individually.
+
+---
+
+### 🔹 [YOLO Running Tool](YOLORunning_Tool/README.md)
+
+A dedicated runner for **YOLO Model object detection**.
+
+* Lets you choose the YOLO model file (`.pt`) and input source (image, folder, or video).
+* Runs detection and saves results in the `runs\detect` folder.
+* Great for testing trained models or applying pretrained YOLO models to new data.
+
+---
+
+👉 Each tool has its **own README tutorial** in its folder, with step-by-step usage guides.
+
+---
+
+## ⚙ Requirements
+
+* Microsoft Windows 10/11
+* [FFmpeg](https://ffmpeg.org/) (for video/image extraction)
+* [Anaconda](https://www.anaconda.com/) (recommended for managing Python environments)
+* [Ultralytics YOLO](https://github.com/ultralytics/ultralytics) (for object detection)
+* [Winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/) (for installing FFmpeg)
+
+---
+
+## 📖 Usage
+
+1. Download or clone this repository.
+2. Navigate to the folder of the tool you want to use.
+3. Run the `.bat` or `.exe` file inside.
+4. See the tool’s individual `README.md` for full instructions.
+
+Each tool is self-contained and will guide you with prompts specific to its task.
+
+---
+
+## 🙌 Credits
+
+See [CREDITS.md](CREDITS.md) for full acknowledgments.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** – see the [LICENSE](LICENCE) file for details.
