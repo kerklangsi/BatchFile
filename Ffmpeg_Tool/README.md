@@ -50,7 +50,6 @@ Please restart the batch file to update PATH.
 The program stays open until you choose to return to the main menu or exit.
 
 ---
-```
 
 ## Notes
 
