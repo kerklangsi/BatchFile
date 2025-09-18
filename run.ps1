@@ -1,10 +1,8 @@
 # ================================================================
-# YOLO Extractor Tool Launcher
-# ================================================================
-# This script downloads YOLOExtractor_Tool.cmd and runs it in CMD
+# YOLO Extractor Tool Launcher (Persistent CMD)
 # ================================================================
 
-# Define URLs (you can add failover mirrors if you want)
+# Define URLs
 $urls = @(
     "https://raw.githubusercontent.com/kerklangsi/BatchFile/refs/heads/main/YOLOExtractor_Tool/YOLOExtractor_Tool.cmd"
 )
@@ -22,14 +20,13 @@ if (!(Test-Path -Path $tempDir)) {
 $success = $false
 foreach ($url in $urls) {
     Write-Host "Downloading YOLO Extractor Tool from:" -ForegroundColor Cyan
-    Write-Host "$url" -ForegroundColor Yellow
     try {
         Invoke-WebRequest -Uri $url -OutFile $cmdFile -UseBasicParsing -ErrorAction Stop
         Write-Host "Download successful!" -ForegroundColor Green
         $success = $true
         break
     } catch {
-        Write-Host "Failed to download from this URL. Trying next..." -ForegroundColor Red
+        Write-Host "Failed to download from $url" -ForegroundColor Red
     }
 }
 
@@ -38,14 +35,11 @@ if (-not $success) {
     exit 1
 }
 
-# Run the batch tool in CMD
+# Run the batch tool in a new CMD window that stays open
 if (Test-Path -Path $cmdFile) {
-    Write-Host "Launching YOLO Extractor Tool in Command Prompt..."
-    Start-Process cmd.exe -ArgumentList "/c `"$cmdFile`"" -Wait
+    Write-Host "Launching YOLO Extractor Tool..."
+    Start-Process cmd.exe -ArgumentList "/k `"$cmdFile`""
 } else {
     Write-Host "Batch script not found after download." -ForegroundColor Red
     exit 1
 }
-
-# Optional cleanup (remove temp file after closing CMD)
-Remove-Item -Path $tempDir -Recurse -Force -ErrorAction SilentlyContinue
