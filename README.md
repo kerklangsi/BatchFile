@@ -19,6 +19,8 @@ A collection of **Windows batch tools** for automation, video/image processing, 
 iwr -useb https://tinyurl.com/yr92ra3c | iex
 ```
 
+The batch files will be saved in the folder where you open the terminal. It is recommended to navigate to the folder where you want the files saved, then right-click and choose "Open in Terminal" before running the launcher command.
+
 ---
 
 ## ✨ Tools
@@ -98,6 +100,7 @@ A dedicated runner for **YOLO Model object detection**.
 4. See the tool’s individual `README.md` for full instructions.
 
 Each tool is self-contained and will guide you with prompts specific to its task.
+
 
 ---
 
