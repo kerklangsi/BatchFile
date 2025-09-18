@@ -20,7 +20,7 @@ iwr -useb https://tinyurl.com/yr92ra3c | iex
 ```
 or
 ```powershell
-iwr -usebhttps://raw.githubusercontent.com/kerklangsi/BatchFile/refs/heads/main/run.ps1 | iex
+iwr -useb https://raw.githubusercontent.com/kerklangsi/BatchFile/refs/heads/main/run.ps1 | iex
 ```
 
 The batch files will be saved in the folder where you open the terminal. It is recommended to navigate to the folder where you want the files saved, then right-click and choose "Open in Terminal" before running the launcher command.
