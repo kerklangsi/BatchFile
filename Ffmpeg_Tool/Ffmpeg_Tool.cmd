@@ -21,7 +21,7 @@ if "%choice%"=="1" (
         echo FFmpeg is already installed. Skipping installation.
     ) else (
         echo Installing FFmpeg...
-        winget install ffmpeg --silent
+        winget install Gyan.FFmpeg --silent --accept-package-agreements --accept-source-agreements
         echo FFmpeg installed successfully.
         echo Please restart the bat.
     )
