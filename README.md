@@ -1,6 +1,6 @@
 # Batch File Utilities
 
-GitHub release (latest by date) – [Releases](https://github.com/kerklangsi/BatchFile/releases)  
+GitHub release (latest by version) – [Releases](https://github.com/kerklangsi/BatchFile/releases)  
 GitHub repo – [BatchFile](https://github.com/kerklangsi/BatchFile)
 
 A collection of **Windows batch tools** for automation, video/image processing, and object detection. Each tool is portable, easy to use, and requires no coding knowledge.
