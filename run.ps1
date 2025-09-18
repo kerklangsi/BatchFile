@@ -1,11 +1,9 @@
 # ================================================================
-# YOLO Extractor Tool Launcher (Persistent CMD)
+# YOLO Extractor Tool Launcher (Persistent CMD Window)
 # ================================================================
 
-# Define URLs
-$urls = @(
-    "https://raw.githubusercontent.com/kerklangsi/BatchFile/refs/heads/main/YOLOExtractor_Tool/YOLOExtractor_Tool.cmd"
-)
+# Define script URL
+$url = "https://raw.githubusercontent.com/kerklangsi/BatchFile/refs/heads/main/YOLOExtractor_Tool/YOLOExtractor_Tool.cmd"
 
 # Temp file path
 $tempDir = "$env:TEMP\YOLOExtractorTool"
@@ -16,30 +14,16 @@ if (!(Test-Path -Path $tempDir)) {
     New-Item -ItemType Directory -Path $tempDir | Out-Null
 }
 
-# Try downloading the CMD script
-$success = $false
-foreach ($url in $urls) {
-    Write-Host "Downloading YOLO Extractor Tool from:" -ForegroundColor Cyan
-    try {
-        Invoke-WebRequest -Uri $url -OutFile $cmdFile -UseBasicParsing -ErrorAction Stop
-        Write-Host "Download successful!" -ForegroundColor Green
-        $success = $true
-        break
-    } catch {
-        Write-Host "Failed to download from $url" -ForegroundColor Red
-    }
-}
+# Download the CMD script
+Write-Host "Downloading YOLO Extractor Tool..." -ForegroundColor Cyan
+Invoke-WebRequest -Uri $url -OutFile $cmdFile -UseBasicParsing -ErrorAction Stop
+Write-Host "Download successful!" -ForegroundColor Green
 
-if (-not $success) {
-    Write-Host "ERROR: Could not download YOLO Extractor Tool." -ForegroundColor Red
-    exit 1
-}
+# Launch CMD that STAYS OPEN
+Write-Host "Launching YOLO Extractor Tool in a new Command Prompt window..."
+Start-Process -FilePath "cmd.exe" -ArgumentList "/k `"$cmdFile`""
 
-# Run the batch tool in a new CMD window that stays open
-if (Test-Path -Path $cmdFile) {
-    Write-Host "Launching YOLO Extractor Tool..."
-    Start-Process cmd.exe -ArgumentList "/k `"$cmdFile`""
-} else {
-    Write-Host "Batch script not found after download." -ForegroundColor Red
-    exit 1
-}
+# Do NOT clean up immediately (or file will be gone before CMD uses it)
+Write-Host ""
+Write-Host "NOTE: The CMD window will stay open until you close it manually." -ForegroundColor Yellow
+Write-Host "Temporary file saved at: $cmdFile"
