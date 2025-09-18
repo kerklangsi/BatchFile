@@ -161,7 +161,38 @@ Choose an option (1-3):
 
 * Predictions: `runs/detect/predict/`
 
+---
 
+# YOLORunning Tool
 
+This tool provides a batch script interface for running YOLO object detection models.
 
+## Features
 
+* Run YOLO models for object detection on images or videos.
+* Manage model selection and configuration.
+* Provide easy-to-use menu-driven commands.
+
+## Usage
+
+Run the `YOLORunning_Tool.cmd` script to start the tool.
+Follow the on-screen menu to select options for running YOLO detection.
+
+## Requirements
+
+* Windows 10 or later.
+* Python environment with necessary YOLO dependencies installed.
+* Pre-trained YOLO models available.
+
+## Notes
+
+* Ensure Python and required packages are installed and accessible in your PATH.
+* Configure model paths and parameters as needed.
+
+## License
+
+Please refer to the LICENSE file in the root BatchFile folder for license details.
+
+---
+
+Created by kerklangsi

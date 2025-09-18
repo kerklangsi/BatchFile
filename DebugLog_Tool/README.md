@@ -1,59 +1,37 @@
 # Debug Log Tool
 
-## 📌 Description
+This batch script helps run another batch file while capturing its output to a timestamped log file.
 
-The **Debug Log Tool** is a Windows batch script that runs another `.bat` file and saves all its console output into a **timestamped log file**.
-It uses `tee.exe` to capture the output while still displaying it in the CMD window.
+## Features
+
+* Prompts for the path to a target batch file to run.
+* Checks if the target batch file exists.
+* Generates a timestamped log file in the same directory as the script.
+* Uses `tee.exe` from GnuWin32 CoreUtils to capture and display output simultaneously.
+* Saves the full output of the target batch file to the log file.
+* Allows running multiple debug sessions in sequence.
+
+## Usage
+
+1. Run `DebugLog_Tool.cmd`.
+2. Enter the full path to the batch file you want to debug.
+3. The script will run the target batch file and save the output to a timestamped log file.
+4. After completion, you can choose to run another debug session or exit.
+
+## Requirements
+
+* Windows with PowerShell or Command Prompt.
+* `tee.exe` from GnuWin32 CoreUtils installed at `C:\Program Files (x86)\GnuWin32\bin\tee.exe` (or update the path in the script).
+
+## Notes
+
+* If `tee.exe` is not found, the script will prompt to download it.
+* Log files are saved with the format `DebugLog_YYYYMMDD_HHMMSS.txt`.
+
+## License
+
+Please refer to the LICENSE file in the root BatchFile folder for license details.
 
 ---
 
-## ✅ Requirements
-
-* Microsoft Windows 10/11
-* Target `.bat` file you want to debug
-* [GnuWin32 CoreUtils](https://sourceforge.net/projects/gnuwin32/) → provides `tee.exe` (must be installed at `C:\Program Files (x86)\GnuWin32\bin\tee.exe`)
-
----
-
-## 🎯 What It’s Used For
-
-* Debugging batch scripts by saving their console output.
-* Keeping permanent logs of script runs.
-* Troubleshooting errors and analysing script behaviour step by step.
-* Running multiple debug sessions without manually copying console text.
-
----
-
-## 🚀 How to Use
-
-1. Run the script:
-
-   ```
-   DebugLog_Tool.exe
-   ```
-
-2. Enter the full path to the target batch file you want to debug. Example:
-
-   ```
-   Path to target BAT file: C:\Scripts\example.bat
-   ```
-
-3. The tool will:
-
-   * Generate a **timestamped log file** (e.g., `DebugLog_20250911_153045.txt`) in the same folder.
-   * Use `tee.exe` to capture output.
-   * Show live output in the CMD window while saving it to the log.
-
-4. After the session ends, the tool displays the log file location:
-
-   ```
-   Full log saved to:
-   C:\Path\To\DebugLog_20250911_153045.txt
-   ```
-
-5. You can choose:
-
-   ```
-   [1] Run another debug session
-   [2] Exit
-   ```
+Created by kerklangsi

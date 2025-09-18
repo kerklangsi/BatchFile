@@ -7,17 +7,19 @@ cls
 echo ================================================================
 echo                     Check for FFmpeg
 echo ================================================================
-where ffmpeg >nul 2>&1
-if %errorlevel%==0 (
-    echo FFmpeg is already installed. Continuing...
-) else (
-    echo FFmpeg is not installed. Installing...
-    winget install ffmpeg
+for /f "delims=" %%F in ('where ffmpeg 2^>nul') do set found_ffmpeg=1
+if not defined found_ffmpeg (
+    echo Installing FFmpeg...
+    winget install "FFmpeg" --silent --accept-package-agreements --accept-source-agreements
     echo FFmpeg installed successfully.
-    echo Please restart this script.
+    echo Please restart the batch file to update PATH.
     timeout /t 2 /nobreak >nul
     goto extract_options
+) else (
+    echo FFmpeg is already installed. Skipping installation.
+    timeout /t 2 /nobreak >nul
 )
+set found_ffmpeg=
 
 cls
 set "choice="

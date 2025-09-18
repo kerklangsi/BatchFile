@@ -164,5 +164,53 @@ Each image is a frame extracted at 2 FPS from the video.
 
 ---
 
-✅ This tool helps you go **from raw video → extracted images → trained YOLO model → predictions**, all inside one script.
+## Features
 
+### Image Extractor
+
+* Extract images from a video file at a specified FPS.
+* Automatically checks for FFmpeg and installs it if missing.
+* Allows specifying video file path, output folder, and FPS.
+
+### YOLO Runner
+
+* Detects Anaconda installation and prompts to install if missing.
+* Creates and activates a conda environment for YOLO training.
+* Installs necessary Python packages (`ultralytics`, `supervision`, `roboflow`, `torch`, `torchvision`).
+* Verifies CUDA availability.
+* Downloads dataset from Roboflow if a link is provided.
+* Allows setting the number of training epochs.
+* Generates a `train_yolo.py` script to run YOLO training, validation, and prediction.
+* Provides menu options to start training, return to YOLO runner, main menu, or exit.
+
+### FFmpeg Install/Uninstall
+
+* Installs or uninstalls FFmpeg using winget.
+* Checks if FFmpeg is installed before performing actions.
+* Allows checking the installed FFmpeg version.
+
+## Usage
+
+Run the `YOLOExtractor_Tool.cmd` script. You will see a main menu with options to extract images, run YOLO training, manage FFmpeg, or exit.
+
+Follow the prompts to enter required inputs and choose actions.
+
+## Requirements
+
+* Windows 10 or later with winget installed.
+* Anaconda installed for YOLO training.
+* Internet connection for downloading packages and datasets.
+
+## Notes
+
+* After installing or uninstalling FFmpeg, restart your command prompt or PowerShell window.
+* Ensure your video files and output folders exist and are accessible.
+* The script uses Python and conda commands; ensure they are in your PATH.
+
+## License
+
+Please refer to the LICENSE file in the root BatchFile folder for license details.
+
+---
+
+Created by kerklangsi
