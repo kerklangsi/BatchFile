@@ -17,44 +17,39 @@ This tool provides a simple batch script to install, uninstall, and check the ve
 
 ## How to Use
 
-Run the `Ffmpeg_Tool.cmd` script. You will see a menu with the following options:
+you will see a menu like this:
 
-```text
-===============================================================
-              INSTALL / UNINSTALL FFMPEG
-===============================================================
+```bat
+
+================================================
+           INSTALL / UNINSTALL FFMPEG
+================================================
 [1] Install FFmpeg
 [2] Uninstall FFmpeg
 [3] Check FFmpeg version
-[4] Exit
-===============================================================
-Choose an option (1-4): 
+[4] Return to Main Menu
+[5] Exit
+Choose an option (1-5):
 ```
 
-### Options
+Choosing install or uninstall shows progress messages:
 
-- **1. Install FFmpeg**  
-  Installs FFmpeg using winget if it is not already installed. If FFmpeg is detected in your PATH, it will skip installation.
-
-- **2. Uninstall FFmpeg**  
-  Uninstalls FFmpeg using winget if it is installed. If FFmpeg is not found in your PATH, it will skip uninstallation.
-
-- **3. Check FFmpeg version**  
-  Displays the current installed FFmpeg version. If FFmpeg is not found in your PATH, it will notify you.
-
-- **4. Exit**  
-  Exits the script.
-
-### Example Input/Output
-
-Input: Choose option 1 to install FFmpeg.  
-
-Output:  
-
-```text
+```bat
 Installing FFmpeg...
 FFmpeg installed successfully.
-Please restart the command prompt for changes to take effect.
+Please restart the batch file to update PATH.
+```
+
+or
+
+```bat
+Uninstalling FFmpeg...
+Please restart the batch file to update PATH.
+```
+
+The program stays open until you choose to return to the main menu or exit.
+
+---
 ```
 
 ## Notes

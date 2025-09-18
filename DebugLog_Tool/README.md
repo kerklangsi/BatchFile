@@ -17,25 +17,26 @@ This batch script helps run another batch file while capturing its output to a t
 
 ## How to Use
 
-1. Run `DebugLog_Tool.cmd`.
-2. Enter the full path to the batch file you want to debug.
-3. The script runs the target batch file and saves output to a timestamped log file.
-4. After completion, choose to run another debug session or exit.
+1. When prompted, enter the full path to the batch file you want to debug.
 
-### Example Input/Output
+   Example input:
 
-Input:
+   ```bat
+   Path to target BAT file: C:\Scripts\MyScript.cmd
+   ```
 
-```
-Path to target BAT file: C:\Scripts\MyScript.cmd
-```
+2. The tool runs the target batch file and captures its output to a timestamped log file.
 
-Output:
+   Example output:
 
-```
-Running MyScript.cmd...
-Output saved to DebugLog_20250919_123456.txt
-```
+   ```bat
+   Running MyScript.cmd...
+   Output saved to DebugLog_20250919_123456.txt
+   ```
+
+3. After the session completes, you can choose to run another debug session or exit.
+
+4. Repeat as needed.
 
 ## Notes
 

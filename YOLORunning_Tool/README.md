@@ -18,33 +18,62 @@ The **YOLO Running Tool** is a Windows batch script that automates running YOLO 
 
 ## How to Use
 
-Run the `YOLORunning_Tool.cmd` script to start the YOLO Runner.
+The program will start with a menu like this:
 
-1. The script checks for Anaconda installation. If not found, it prompts to install Anaconda.
+```bat
+Enter YOLO version number: 8
+```
 
-2. You will be prompted to enter the YOLO version number (e.g., 8 for YOLOv8, 11 for YOLOv11).
+It will then activate or create the conda environment and install dependencies, showing messages like:
 
-3. The script activates the corresponding conda environment or creates it if missing.
+```bat
+Anaconda detected!
+Creating conda environment yolov8 ...
+Installing ultralytics, supervision, roboflow...
+Installing PyTorch...
+True NVIDIA GeForce RTX 4090
+```
 
-4. It checks and installs required Python dependencies automatically.
+Next, it prompts for the Roboflow dataset link:
 
-5. The script verifies CUDA availability for GPU acceleration.
+```bat
+Paste your Roboflow dataset download link:
+```
 
-6. You will be prompted to paste a Roboflow dataset download link or press Enter to skip.
+If you enter a link, it downloads the dataset:
 
-7. Enter the number of epochs to train (e.g., 50).
+```
+Downloading dataset from Roboflow...
+```
 
-8. The script generates a `train_yolo.py` Python script that runs training, validation, and prediction.
+Then it prompts for epochs:
 
-9. You will see a menu to start training, return to YOLO runner, or exit.
+```bat
+Enter number of epochs to train (e.g. 50): 50
+```
 
-10. When training starts, the script runs the Python training script and shows progress.
+It creates the training script and asks for confirmation:
 
-11. After training, you can choose to rerun training, return to YOLO runner, or exit.
+```
+[1] Start YOLO training
+[2] Back to YOLO runner
+[3] Return to Main Menu
+[4] Exit
+Choose an option (1-4):
+```
 
-12. Training results, including best weights and predictions, are saved in the `runs/detect` folder.
+If you start training, it runs Python and shows training progress:
 
-This process automates YOLO model training with minimal manual setup.
+```
+Starting YOLO training...
+Epoch 1/50 - loss: 2.1
+...
+Training complete! Check the 'runs/detect' folder for results.
+```
+
+The program stays open for further commands until you choose to exit.
+
+---
 
 ## Notes
 

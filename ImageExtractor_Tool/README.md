@@ -17,32 +17,42 @@ This batch script provides a simple interface to extract images from video files
 
 ## How to Use
 
-Run the `ImageExtractor_Tool.cmd` script. You will be prompted to enter:
+RWhen you select this option, the program will prompt you step-by-step:
 
-- Full path to the video file.
-- Full path to the output folder.
-- FPS (frames per second) to extract images.
-
-### Example Input/Output
-
-Input:
-
-```text
-Video file: C:\Videos\car.mp4
-Output folder: C:\Dataset\CarImages
-FPS: 2
+```bat
+Enter full path to video file: C:\Videos\car.mp4
+Enter full path to output folder: C:\Dataset\CarImages
+Enter FPS to extract: 2
 ```
 
-Output:
+Then it will show a review screen:
 
-```text
-car_0001.png
-car_0002.png
-car_0003.png
-...
+```bat
+Video file:    "C:\Videos\car.mp4"
+Output folder: "C:\Dataset\CarImages"
+FPS:           2
+Base name:     car
+Example file:  "C:\Dataset\CarImages\car_0001.png"
 ```
 
-Each image is a frame extracted at 2 FPS from the video.
+You will then see extraction options:
+
+```
+[1] Start extraction
+[2] Return to Main Menu
+[3] Change inputs
+[4] Exit
+Choose an option (1-3):
+```
+
+If you choose to start extraction, the program runs ffmpeg and shows:
+
+```
+Extraction complete!
+```
+
+The program stays open for further commands until you choose to exit.
+
 
 ## Notes
 
