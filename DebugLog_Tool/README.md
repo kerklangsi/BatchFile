@@ -27,11 +27,3 @@ This batch script helps run another batch file while capturing its output to a t
 
 * If `tee.exe` is not found, the script will prompt to download it.
 * Log files are saved with the format `DebugLog_YYYYMMDD_HHMMSS.txt`.
-
-## License
-
-Please refer to the LICENSE file in the root BatchFile folder for license details.
-
----
-
-Created by kerklangsi
