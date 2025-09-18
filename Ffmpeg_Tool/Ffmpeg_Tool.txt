@@ -21,7 +21,7 @@ if "%choice%"=="1" (
         echo FFmpeg is already installed. Skipping installation.
     ) else (
         echo Installing FFmpeg...
-        winget install ffmpeg
+        winget install ffmpeg --silent
         echo FFmpeg installed successfully.
         echo Please restart the bat.
     )
@@ -34,7 +34,7 @@ if "%choice%"=="2" (
         echo FFmpeg is not installed. Skipping uninstallation.
     ) else (
         echo Uninstalling FFmpeg...
-        winget uninstall ffmpeg
+        winget uninstall ffmpeg --silent
         echo Please restart the bat.
     )
     timeout /t 2 /nobreak >nul
