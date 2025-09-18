@@ -18,38 +18,33 @@ The **YOLO Running Tool** is a Windows batch script that automates running YOLO 
 
 ## How to Use
 
-Run the `YOLORunning_Tool.cmd` script to start the tool. You will see a menu with options to select YOLO version, activate environment, and run detection.
+Run the `YOLORunning_Tool.cmd` script to start the YOLO Runner.
 
-### Step 1: Select YOLO Version
+1. The script checks for Anaconda installation. If not found, it prompts to install Anaconda.
 
-```
-Select YOLO version number: 8
-```
+2. You will be prompted to enter the YOLO version number (e.g., 8 for YOLOv8, 11 for YOLOv11).
 
-This sets the model and conda environment (e.g., `yolov8`).
+3. The script activates the corresponding conda environment or creates it if missing.
 
-### Step 2: Activate Conda Environment
+4. It checks and installs required Python dependencies automatically.
 
-The script activates the conda environment automatically:
+5. The script verifies CUDA availability for GPU acceleration.
 
-```
-Activating conda environment yolov8...
-```
+6. You will be prompted to paste a Roboflow dataset download link or press Enter to skip.
 
-### Step 3: Run Detection
+7. Enter the number of epochs to train (e.g., 50).
 
-You will be prompted to choose input source (image, folder, or video) and run detection.
+8. The script generates a `train_yolo.py` Python script that runs training, validation, and prediction.
 
-Example output:
+9. You will see a menu to start training, return to YOLO runner, or exit.
 
-```
-Running detection on input images...
-Detection complete! Results saved in runs\detect folder.
-```
+10. When training starts, the script runs the Python training script and shows progress.
 
-### Step 4: Review Results
+11. After training, you can choose to rerun training, return to YOLO runner, or exit.
 
-Check the `runs\detect` folder for detection outputs, including images with bounding boxes and logs.
+12. Training results, including best weights and predictions, are saved in the `runs/detect` folder.
+
+This process automates YOLO model training with minimal manual setup.
 
 ## Notes
 
