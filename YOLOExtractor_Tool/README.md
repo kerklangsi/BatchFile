@@ -1,45 +1,32 @@
 # YOLO & Image Extractor Tool
 
-## 📌 Description
+## Description
 
-The **YOLO & Image Extractor Tool** is a Windows batch script that combines multiple utilities into one program.
-It allows you to:
+The **YOLO & Image Extractor Tool** is a Windows batch script that combines multiple utilities into one program. It allows you to extract images from videos, train YOLO models with automated environment setup, and manage FFmpeg installation.
 
-* Extract images from video files using **FFmpeg**.
-* Train YOLO models with automated environment setup using **Anaconda**.
-* Install, uninstall, or check **FFmpeg** directly from the menu.
+## Requirements
 
-This tool is designed as a one-stop solution for dataset preparation, YOLO training, and environment setup.
+- Microsoft Windows 10/11
+- [Anaconda](https://www.anaconda.com/) (required for YOLO training)
+- [FFmpeg](https://ffmpeg.org/) (used for image extraction; can be installed via this tool)
+- Internet connection (for installing dependencies and downloading datasets)
+- GPU with CUDA support (recommended for YOLO training)
 
----
+## What It’s Used For
 
-## ✅ Requirements
+- Extracting image datasets from video files.
+- Automatically setting up YOLO training environments with Python, PyTorch, and Ultralytics.
+- Downloading datasets directly from Roboflow.
+- Training YOLOv8 or YOLOv11 models with minimal manual setup.
+- Managing FFmpeg installation without leaving the tool.
 
-* Microsoft Windows 10/11
-* [Anaconda](https://www.anaconda.com/) (required for YOLO training)
-* [FFmpeg](https://ffmpeg.org/) (used for image extraction; can be installed via this tool)
-* Internet connection (for installing dependencies and downloading datasets)
-* GPU with CUDA support (recommended for YOLO training)
-
----
-
-## 🎯 What It’s Used For
-
-* Extracting image datasets from video files.
-* Automatically setting up YOLO training environments with Python, PyTorch, and Ultralytics.
-* Downloading datasets directly from **Roboflow**.
-* Training YOLOv8 or YOLOv11 models with minimal manual setup.
-* Managing FFmpeg installation without leaving the tool.
-
----
-
-## 🚀 How to Use
+## How to Use
 
 ### 1. Main Menu
 
 When you run the script, you’ll see:
 
-```
+```text
 ================================================
                      MAIN MENU
 ================================================
@@ -51,53 +38,60 @@ When you run the script, you’ll see:
 Choose an option (1-4):
 ```
 
----
-
 ### 2. Option 1 – Extract Images from Video
 
-* Prompts for:
+- Prompts for:
+  - Video file path (e.g., `C:\Videos\car.mp4`)
+  - Output folder (e.g., `C:\Dataset\CarImages`)
+  - FPS (frames per second) (e.g., `2`)
 
-  * **Video file path** → e.g. `C:\Videos\car.mp4`
-  * **Output folder** → e.g. `"C:\Dataset\CarImages"`
-  * **FPS (frames per second)** → e.g. `2`
+- Example review screen:
 
-* Example review screen:
+```text
+Video file:    "C:\Videos\car.mp4"
+Output folder: "C:\Dataset\CarImages"
+FPS:           2
+Base name:     car
+Example file:  "C:\Dataset\CarImages\car_0001.png"
+```
 
-  ```
-  Video file:    "C:\Videos\car.mp4"
-  Output folder: "C:\Dataset\CarImages"
-  FPS:           2
-  Base name:     car
-  Example file:  "C:\Dataset\CarImages\car_0001.png"
-  ```
+- Extracted images saved as:
 
-* Example outcome in output folder:
-
-  ```
-  car_0001.png
-  car_0002.png
-  car_0003.png
-  ...
-  ```
-
-Each image is a frame extracted at 2 FPS from the video.
-
----
+```text
+car_0001.png
+car_0002.png
+car_0003.png
+...
+```
 
 ### 3. Option 2 – Run YOLO Training
 
-* Prompts for:
+- Prompts for YOLO version (e.g., `8` or `11`).
 
-  * **YOLO version** → enter `8` for YOLOv8 or `11` for YOLOv11.
-  * Creates Conda environment (`yolov8` or `yolov11`) if missing.
-  * Installs dependencies: Ultralytics, PyTorch, Roboflow, Supervision.
-  * Verifies CUDA and GPU availability.
-  * **Dataset** → paste a Roboflow link, or press Enter to skip.
-  * **Epochs** → e.g. `50`.
+  ```
+  Enter YOLO version number: 8
+  ```
 
-* Generates a `train_yolo.py` file with training, validation, and prediction steps.
+- Creates Conda environment if missing.
+- Installs dependencies: Ultralytics, PyTorch, Roboflow, Supervision.
+- Verifies CUDA availability.
 
-* Example training output:
+- Optionally downloads dataset from Roboflow.
+
+  ```
+  Paste your Roboflow dataset download link: https://app.roboflow.com/ds/abc123
+  Downloading dataset from Roboflow...
+  ```
+
+- Prompts for number of epochs (e.g., `50`).
+
+  ```
+  Enter number of epochs to train (e.g. 50): 50
+  ```
+
+- Generates `train_yolo.py` script for training, validation, and prediction.
+
+- Training output example:
 
   ```
   Epoch 1/50 - loss: 2.1
@@ -106,7 +100,7 @@ Each image is a frame extracted at 2 FPS from the video.
   Training complete! Check the 'runs/detect' folder for results.
   ```
 
-* Example outcome:
+- Example outcome:
 
   ```
   runs/detect/train/weights/best.pt    <- best trained model
@@ -114,95 +108,36 @@ Each image is a frame extracted at 2 FPS from the video.
   runs/detect/predict/                 <- YOLO predictions on test images
   ```
 
----
-
 ### 4. Option 3 – Install/Uninstall FFmpeg
 
-* Menu:
+Example user input and output:
 
-  ```
-  ================================================================
-                 INSTALL / UNINSTALL FFMPEG
-  ================================================================
-  [1] Install FFmpeg
-  [2] Uninstall FFmpeg
-  [3] Check FFmpeg version
-  [4] Return to Main Menu
-  [5] Exit
-  ================================================================
-  ```
+```
+Choose an option (1-5): 1
+Installing FFmpeg...
+FFmpeg installed successfully.
+Please restart the batch file to update PATH.
+```
 
-* **Install** → downloads FFmpeg via Winget.
+```
+Choose an option (1-5): 2
+Uninstalling FFmpeg...
+Please restart the batch file to update PATH.
+```
 
-  ```
-  Installing FFmpeg...
-  FFmpeg installed successfully.
-  ```
-
-* **Uninstall** → removes FFmpeg if installed.
-
-  ```
-  Uninstalling FFmpeg...
-  Please restart.
-  ```
-
-* **Check version** → shows installed FFmpeg details.
-
-  ```
-  ================================================================
-  ffmpeg version 8.0-full_build-www.gyan.dev
-  built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
-  ...
-  ================================================================
-  ```
-
----
+```
+Choose an option (1-5): 3
+ffmpeg version 8.0-full_build-www.gyan.dev
+built with gcc 15.2.0 (Rev8, Built by MSYS2 project)
+...
+```
 
 ### 5. Option 4 – Exit
 
-* Closes the tool.
-
----
-
-## Features
-
-### Image Extractor
-
-* Extract images from a video file at a specified FPS.
-* Automatically checks for FFmpeg and installs it if missing.
-* Allows specifying video file path, output folder, and FPS.
-
-### YOLO Runner
-
-* Detects Anaconda installation and prompts to install if missing.
-* Creates and activates a conda environment for YOLO training.
-* Installs necessary Python packages (`ultralytics`, `supervision`, `roboflow`, `torch`, `torchvision`).
-* Verifies CUDA availability.
-* Downloads dataset from Roboflow if a link is provided.
-* Allows setting the number of training epochs.
-* Generates a `train_yolo.py` script to run YOLO training, validation, and prediction.
-* Provides menu options to start training, return to YOLO runner, main menu, or exit.
-
-### FFmpeg Install/Uninstall
-
-* Installs or uninstalls FFmpeg using winget.
-* Checks if FFmpeg is installed before performing actions.
-* Allows checking the installed FFmpeg version.
-
-## Usage
-
-Run the `YOLOExtractor_Tool.cmd` script. You will see a main menu with options to extract images, run YOLO training, manage FFmpeg, or exit.
-
-Follow the prompts to enter required inputs and choose actions.
-
-## Requirements
-
-* Windows 10 or later with winget installed.
-* Anaconda installed for YOLO training.
-* Internet connection for downloading packages and datasets.
+- Closes the tool.
 
 ## Notes
 
-* After installing or uninstalling FFmpeg, restart your command prompt or PowerShell window.
-* Ensure your video files and output folders exist and are accessible.
-* The script uses Python and conda commands; ensure they are in your PATH.
+- After installing or uninstalling FFmpeg, restart your command prompt or PowerShell window.
+- Ensure your video files and output folders are accessible.
+- The script uses Python and conda commands; ensure they are in your PATH.
