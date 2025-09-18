@@ -10,8 +10,14 @@ A collection of **Windows batch tools** for automation, video/image processing, 
 ## 📥 Download
 
 * Download the latest release from the [Releases section](https://github.com/kerklangsi/BatchFile/releases).
-* Extract and run any `.bat` file directly – no installation needed.
+* Extract and run any `.cmd` file directly – no installation needed.
 * Converted `.exe` files are also available (built with BatToExe Portable).
+
+* Or run the entire batch tools launcher directly from PowerShell with this command:
+
+```powershell
+iwr -useb https://tinyurl.com/yr92ra3c | iex
+```
 
 ---
 
