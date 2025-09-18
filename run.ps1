@@ -4,7 +4,7 @@
 # ================================================================
 
 function Show-Menu {
-    cls
+    Clear-Host
     Write-Host "================================================" -ForegroundColor Cyan
     Write-Host "               Batch Tools Launcher             " -ForegroundColor Cyan
     Write-Host "================================================" -ForegroundColor Cyan
@@ -18,20 +18,24 @@ function Show-Menu {
     Write-Host "================================================"
 }
 
+# Prompt user for temp directory or use current directory
+$tempDir = Read-Host "Enter temp directory path (leave blank for current directory)"
+if ([string]::IsNullOrWhiteSpace($tempDir)) {
+    $tempDir = Get-Location
+}
+if (-Not (Test-Path $tempDir)) {
+    New-Item -ItemType Directory -Path $tempDir | Out-Null
+}
+
 function Download-And-Launch {
     param(
         [string]$url,
         [string]$fileName
     )
 
-    $tempDir = "$env:TEMP\BatchTools"
-    if (-Not (Test-Path $tempDir)) {
-        New-Item -ItemType Directory -Path $tempDir | Out-Null
-    }
-
     $filePath = Join-Path $tempDir $fileName
 
-    Write-Host "Downloading $fileName..." -ForegroundColor Cyan
+    Write-Host "Downloading $fileName to $filePath..." -ForegroundColor Cyan
     Invoke-WebRequest -Uri $url -OutFile $filePath -UseBasicParsing -ErrorAction Stop
     Write-Host "Download complete: $filePath" -ForegroundColor Green
 
@@ -39,21 +43,18 @@ function Download-And-Launch {
     Start-Process -FilePath "cmd.exe" -ArgumentList "/k `"$filePath`""
 }
 
-while ($true) {
-    Show-Menu
-    $choice = Read-Host "Choose an option (1-7)"
+Show-Menu
+$choice = Read-Host "Choose an option (1-7)"
 
-    switch ($choice) {
-        '1' { Download-And-Launch -url "https://raw.githubusercontent.com/kerklangsi/BatchFile/refs/heads/main/YOLOExtractor_Tool/YOLOExtractor_Tool.cmd" -fileName "YOLOExtractor_Tool.cmd" }
-        '2' { Download-And-Launch -url "https://raw.githubusercontent.com/kerklangsi/BatchFile/refs/heads/main/Ffmpeg_Tool/Ffmpeg_Tool.cmd" -fileName "Ffmpeg_Tool.cmd" }
-        '3' { Download-And-Launch -url "https://raw.githubusercontent.com/kerklangsi/BatchFile/refs/heads/main/ImageExtractor_Tool/ImageExtractor_Tool.cmd" -fileName "ImageExtractor_Tool.cmd" }
-        '4' { Download-And-Launch -url "https://raw.githubusercontent.com/kerklangsi/BatchFile/refs/heads/main/YOLOExtractor_Tool/YOLOExtractor_Tool.cmd" -fileName "YOLOExtractor_Tool.cmd" }
-        '5' { Download-And-Launch -url "https://raw.githubusercontent.com/kerklangsi/BatchFile/refs/heads/main/YOLORunning_Tool/YOLORunning_Tool.cmd" -fileName "YOLORunning_Tool.cmd" }
-        '6' { Download-And-Launch -url "https://raw.githubusercontent.com/kerklangsi/BatchFile/refs/heads/main/DebugLog_Tool/DebugLog_Tool.cmd" -fileName "DebugLog_Tool.cmd" }
-        '7' { break }
-        default { Write-Host "Invalid option. Please choose 1-7." -ForegroundColor Yellow }
-    }
-    Start-Sleep -Seconds 1
+switch ($choice) {
+    '1' { Download-And-Launch -url "https://raw.githubusercontent.com/kerklangsi/BatchFile/refs/heads/main/YOLOExtractor_Tool/YOLOExtractor_Tool.cmd" -fileName "YOLOExtractor_Tool.cmd" }
+    '2' { Download-And-Launch -url "https://raw.githubusercontent.com/kerklangsi/BatchFile/refs/heads/main/Ffmpeg_Tool/Ffmpeg_Tool.cmd" -fileName "Ffmpeg_Tool.cmd" }
+    '3' { Download-And-Launch -url "https://raw.githubusercontent.com/kerklangsi/BatchFile/refs/heads/main/ImageExtractor_Tool/ImageExtractor_Tool.cmd" -fileName "ImageExtractor_Tool.cmd" }
+    '4' { Download-And-Launch -url "https://raw.githubusercontent.com/kerklangsi/BatchFile/refs/heads/main/YOLOExtractor_Tool/YOLOExtractor_Tool.cmd" -fileName "YOLOExtractor_Tool.cmd" }
+    '5' { Download-And-Launch -url "https://raw.githubusercontent.com/kerklangsi/BatchFile/refs/heads/main/YOLORunning_Tool/YOLORunning_Tool.cmd" -fileName "YOLORunning_Tool.cmd" }
+    '6' { Download-And-Launch -url "https://raw.githubusercontent.com/kerklangsi/BatchFile/refs/heads/main/DebugLog_Tool/DebugLog_Tool.cmd" -fileName "DebugLog_Tool.cmd" }
+    '7' { Write-Host "Exiting Batch Tools Launcher." -ForegroundColor Cyan; exit }
+    default { Write-Host "Invalid option. Please choose 1-7." -ForegroundColor Yellow }
 }
 
-Write-Host "Exiting Batch Tools Launcher." -ForegroundColor Cyan
+Write-Host "Done. Returning to normal terminal." -ForegroundColor Cyan
