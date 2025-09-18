@@ -51,11 +51,3 @@ Choose an option (1-4):
 
 - Windows 10 or later with winget installed and configured.
 - Internet connection to download FFmpeg during installation.
-
-## License
-
-Please refer to the LICENSE file in the root BatchFile folder for license details.
-
----
-
-Created by kerklangsi

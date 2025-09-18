@@ -27,11 +27,3 @@ The tool will extract images from the video and save them in the specified outpu
 
 * After installing FFmpeg, restart your command prompt or PowerShell window.
 * Ensure the video file path and output folder are accessible.
-
-## License
-
-Please refer to the LICENSE file in the root BatchFile folder for license details.
-
----
-
-Created by kerklangsi

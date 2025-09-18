@@ -188,11 +188,3 @@ Follow the on-screen menu to select options for running YOLO detection.
 
 * Ensure Python and required packages are installed and accessible in your PATH.
 * Configure model paths and parameters as needed.
-
-## License
-
-Please refer to the LICENSE file in the root BatchFile folder for license details.
-
----
-
-Created by kerklangsi

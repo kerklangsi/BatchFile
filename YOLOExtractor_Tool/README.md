@@ -206,11 +206,3 @@ Follow the prompts to enter required inputs and choose actions.
 * After installing or uninstalling FFmpeg, restart your command prompt or PowerShell window.
 * Ensure your video files and output folders exist and are accessible.
 * The script uses Python and conda commands; ensure they are in your PATH.
-
-## License
-
-Please refer to the LICENSE file in the root BatchFile folder for license details.
-
----
-
-Created by kerklangsi
